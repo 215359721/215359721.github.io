@@ -1,24 +1,27 @@
-# vue_simple_pratice
+# 问题记录
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 1.v-html注意
+    v-html不建议使用字符串模板引擎或进行动态传值，会存在注入攻击的风险，应该尽量使用组件
+    v-html一般只用在某些固定值的显示或可信内容的显示上，而不要针对用户可修改的内容进行使用
+### 2.计算属性computed
+    计算属性中方法必须有返回值
+    计算属性中不能修改data中数据内容
+    计算属性有默认有get，可以手动添加set方法，用于将计算属性返回值赋值给data中相应数据
+### 3.v-if和v-for
+    注意v-if和v-for不能混合使用
+### 4.组件及props传值
+    一般情况下，props中子组件不可直接改变props中的值，只能由父组件更改（父->子单向传递）
+    子组件中props中内容是供父组件调用改变的值的接口数据
+    若实现父子组件双向传递：
+    1.父组件使用v-model传递；
+    2.子组件中使用中间变量接收父组件传过来的值；
+    3.子组件watch监听两个值的改变并调用父组件中相应的v-on及回调method；
+    4.在父method中完成数据的接收并使用
+### 5.插槽slot
+    slot在组件中可以设置默认值（原始内容），当调用处不设置任何值时，插槽中默认内容会显示；
+    当调用处设置具体值时，插槽中内容会被替换
+### 6.
+### 7.
+### 8.
+### 9.
+### 10.
