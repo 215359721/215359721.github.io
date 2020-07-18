@@ -22,6 +22,7 @@ export default {
     title: String,
     id: Number
   },
+  mixins: {},
   data () {
     return {
       count: 0,

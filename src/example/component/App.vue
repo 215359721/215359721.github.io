@@ -19,11 +19,18 @@
       这是插套的内容{{slotValue}}
       <!-- </template> -->
     </my-button>
+    <div class="outer">
+      <button @click="visitChild">改变子组件</button>
+      <span class="label">{{labelText}}</span>
+      <br />
+      <single-button ref="demo"></single-button>
+    </div>
   </div>
 </template>
 
 <script>
 import myButton from './myButton.vue'
+import singleButton from './singleButton.vue'
 export default {
   name: 'App',
   data () {
@@ -31,7 +38,8 @@ export default {
       fatherTitle_1: '第1个父元素值',
       fatherTitle_2: '第2个父元素值',
       fatherTitle_3: '第3个父元素值',
-      slotValue: 999
+      slotValue: 999,
+      labelText: 'test'
     }
   },
   methods: {
@@ -44,9 +52,15 @@ export default {
       } else if (Number(obj.id) === 3) {
         this.fatherTitle_3 = obj.value
       }
+    },
+    fatherAlert: function (msg) {
+      console.log(msg || 'this is fathers method!')
+    },
+    visitChild: function () {
+      this.$refs.demo.childAlert()
     }
   },
-  components: { myButton }
+  components: { myButton, singleButton }
 }
 
 </script>
@@ -59,5 +73,6 @@ export default {
   width: 200px;
   padding: 10px;
   display: inline-block;
+  text-align: center;
 }
 </style>
