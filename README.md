@@ -28,6 +28,15 @@
     对于组件绑定ref，可以通过对象方式访问组件内任何对象或方法
     当ref和v-for一起使用时，得到的ref是一个子组件的数组
     $refs只在组件渲染完成后才能生效
-### 8.
-### 9.
+### 8.filter过滤器
+    要过滤的字段后面跟“|”，过滤器后面跟的方法是串联形式
+    Vue实例或组件中在filters中定义过滤器方法
+    过滤器方法可以有参数，默认第一个参数是要过滤的字段，后面参数为自定义参数，可省略也可以根据要求添加
+### 9.Vuex-store
+    引入VueX，使用Vue.use(Vuex)，使用Vuex，实例化store，在根组件中引入store并定义
+    store中state为根状态管理，可以用来管理全局变量，但不能在组件中直接访问
+    getter，类似组件的computed，可提供方法供组件计算属性调用或使用...mapGetters
+    mutations,同步操作，子组件中方法使用commit(functionName,args..)形式调用或用于操作stats中数据，可以使用...mapMutations
+    actions，与mutations不同，可以异步操作，可以使用...mapActions
+    项目中如有必要可以将getter、mutations、actions抽离为单独的js文件
 ### 10.
