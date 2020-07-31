@@ -10,7 +10,7 @@
 </template>
 <script>
 import pdf from 'vue-pdf'
-var loadingTask = pdf.createLoadingTask('/pdf/user2.pdf')
+var loadingTask = pdf.createLoadingTask('pdf/user2.pdf')
 export default {
   name: 'App',
   components: {
