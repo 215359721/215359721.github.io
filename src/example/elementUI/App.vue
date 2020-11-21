@@ -23,8 +23,22 @@
   </div> -->
   <div style="width:100%">
     <h1 style="margin-left:10px;">request</h1>
+
+    <el-input
+      class="demo"
+      placeholder="123"
+      :value="content"
+    />
+    <el-input
+      class="demo"
+      placeholder="123"
+      type="password"
+      :value="content"
+    />
+
     <el-button
-      class="btn"
+      class="
+      btn"
       type="success"
       @click="queryData('/comments')"
     >请求comments数据</el-button>
@@ -75,20 +89,21 @@
 <script>
 import { get } from '@/api/axios'
 import { Mock } from '@/Mock'
-import { Button, Table, TableColumn, Loading } from 'element-ui'
+import { Button, Table, TableColumn, Loading, Input } from 'element-ui'
 const BASE_URL = 'http://jsonplaceholder.typicode.com'
 export default {
   name: 'App',
   components: {
     [Button.name]: Button,
     [Table.name]: Table,
-    [TableColumn.name]: TableColumn
+    [TableColumn.name]: TableColumn,
+    [Input.name]: Input
   },
   computed: {
   },
   data () {
     return {
-
+      content: '444',
       colums: [
         {
           title: 'postId',
@@ -174,5 +189,13 @@ export default {
 .btn {
   margin-left: 10px;
   margin-bottom: 20px;
+}
+.demo {
+  width: 400px;
+  height: 50px;
+}
+.el-input input {
+  height: 60px;
+  border: 1px solid red;
 }
 </style>
