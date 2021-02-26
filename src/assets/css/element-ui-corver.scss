@@ -1,0 +1,10 @@
+// 覆盖element-ui样式
+.el-loading-spinner i {
+    color: #fff !important;
+    font-size: 30px;
+  }
+.el-loading-spinner .el-loading-text {
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: bold;
+}

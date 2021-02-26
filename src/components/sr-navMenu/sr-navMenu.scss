@@ -1,0 +1,47 @@
+.menu{
+  width: 100%;
+  display: flex;
+}
+.left{
+    width: 30%;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+  .right{
+    width: 70%;
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 100px;
+  }
+  .menu-logo{
+    width:60%;
+  }
+  .menu-title{
+    margin-left:12px;
+  }
+
+
+.ant-menu{
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255,0);
+  color: #fff;
+  font-weight: bold;
+}
+.ant-menu-horizontal{
+  border-bottom:none;
+}
+.ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected {
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.ant-menu-submenu-title:hover {
+    color: #fff;
+}
+.ant-menu-sub > .ant-menu-item{
+  color: #000;
+  font-weight: bold;
+}

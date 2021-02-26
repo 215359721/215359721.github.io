@@ -1,0 +1,66 @@
+.box-main{
+  // background-color: turquoise;
+  position:absolute;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+.box-head{
+  width: 100%;
+  display: flex;
+  height: 50px;
+  background-color: yellowgreen;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+.box-content{
+  width: 100%;
+  display: flex;
+  height: 100%;
+  // background-color: burlywood;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+.ant-card{
+    width: 100%;
+    background-color: transparent;
+  }
+.tabs-head{
+  .ant-card-head{
+    min-height: 10px;
+    border-bottom: 0px;
+    padding: 0 10px;
+    .ant-tabs{
+      color: @second-font-color;
+    }
+  }
+  .ant-tabs .ant-tabs-large-bar .ant-tabs-nav-container{
+    font-size: 18px;
+  }
+  //head文字下方指示条
+  .ant-tabs-ink-bar{
+    height:3px;
+    background-color: @main-font-color;
+  }
+  //当前鼠标指向hover文字颜色
+  .ant-tabs-tab:hover{
+    color: @main-font-color;
+  }
+  //当前激活tab文字颜色
+  .ant-tabs-tab-active{
+    // border-radius: 6px 6px 0 0 ;
+    // background-color: red;
+    // color: white;
+    color:@main-font-color;
+  }
+  .ant-tabs .ant-tabs-large-bar .ant-tabs-tab{
+    padding: 12px;
+    margin-right: 15px;
+  }
+  .ant-tabs-bar{
+    border-bottom: none;
+  }
+  a{
+    color: @second-font-color;
+  }
+}
