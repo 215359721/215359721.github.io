@@ -1,6 +1,6 @@
 
 //当前部署版本号
-var base_version = '11_25_02'
+var base_version = '11_25_03'
 //流程地址
 var base_ip_flow = 'http://api.bjsasc.com/graph'
 //语义网地址
@@ -12,7 +12,7 @@ var grid_height_flow = 180
 //泳道图网格-间距
 var grid_gap_flow = 5
 //移动偏移量-x
-var move_offset_x = -7
+var move_offset_x = 0
 //移动偏移量-y
 var move_offset_y = 1
 var config = {
