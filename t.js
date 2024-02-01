@@ -1,11 +1,8 @@
 window.onload = function () {
   console.log('onloadOK')
   if (typeof QWebChannel !== "undefined") {
-    console.log('difdif', new QWebChannel())
     new QWebChannel(qt.webChannelTransport, function (channel) {
-
       window.bridge = channel.objects.bridge;
-
       // 启用按钮，确保此时 window.bridge 已经可用
       document.getElementById("openAppBtn").disabled = false;
     });
